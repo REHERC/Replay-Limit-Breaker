@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Spectrum.API.Configuration;
-using Spectrum.API.Logging;
-using Spectrum.API.Storage;
+﻿using Spectrum.API.Logging;
 
 namespace ReplayIntensifies
 {
@@ -9,8 +6,10 @@ namespace ReplayIntensifies
     {
         public static void Initialize()
         {
-            Log = new Logger("ReplayIntensifies.log");
-            Log.WriteToConsole = true;
+            Log = new Logger("ReplayIntensifies.log")
+            {
+                WriteToConsole = true
+            };
         }
 
         public static Logger Log;
